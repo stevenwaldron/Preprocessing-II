@@ -1,1 +1,19 @@
 // Mixins in here
+.buttons(@width,@background,@border-radius, @margin-left) {
+    padding: 1rem;
+    width: @width;
+    background: @background;
+    border-radius: @border-radius;
+    color: white;
+    margin-left: @margin-left;
+    
+
+}
+
+button {
+    .buttons(75%, rgb(17, 122, 114),10%,5%, );
+    
+    @media @mobile {
+        .buttons(350px, @eastern-blue,10%,0px, );
+    }
+}
